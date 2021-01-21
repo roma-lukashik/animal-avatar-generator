@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "declaration": true,
+    "target": "ES2017",
+    "lib": [
+      "es2019",
+      "dom"
+    ]
+  }
+}
