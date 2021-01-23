@@ -2,9 +2,7 @@ const MIN = -(2 ** 31)
 const MAX = (2 ** 31) - 1
 
 export const random = (key: string) => {
-  let value = hash(key)
-  const next = () => value = xorshift(value)
-  return <T extends any>(arr: T[]): T => arr[integer(next(), 0, arr.length - 1)]
+  return <T extends any>(arr: T[]): T => arr[integer(xorshift(hash(key)), 0, arr.length - 1)]
 }
 
 const integer = (value: number, min: number, max: number) =>
