@@ -10,26 +10,18 @@ export const createSvg = (width: number, height: number, ...children: string[]) 
   </svg>
 `
 
-export const createCircle = (
-  cx: number,
-  cy: number,
-  r: number,
-  color: string,
-) => `
+export const createCircle = (color: string) => `
   <circle
-    cx="${cx}"
-    cy="${cy}"
-    r="${r}"
+    cx="250"
+    cy="250"
+    r="250"
     fill="${color}"
   />
 `
 
-export const createShadow = (width: number, height: number) => `
+export const createShadow = () => `
   <path
-    d="
-      M ${width / 2}, ${0}
-      a ${width / 2},${height / 2} 0 1,1 ${0},${height}
-    "
-    fill="rgba(0,0,0,0.15)"
+    d="M250,0a250,250 0 1,1 0,500"
+    fill-opacity="0.08"
   />
 `
