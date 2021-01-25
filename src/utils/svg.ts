@@ -1,9 +1,9 @@
-export const createSvg = (width: number, height: number, ...children: string[]) => `
+export const createSvg = (size: number, ...children: string[]) => `
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    width="${width}"
-    height="${height}"
+    width="${size}"
+    height="${size}"
     viewBox="0 0 500 500"
   >
     ${children.join('')}
