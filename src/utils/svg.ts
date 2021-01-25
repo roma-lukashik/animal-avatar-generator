@@ -4,6 +4,7 @@ export const createSvg = (width: number, height: number, ...children: string[]) 
     version="1.1"
     width="${width}"
     height="${height}"
+    viewBox="0 0 500 500"
   >
     ${children.join('')}
   </svg>
