@@ -8,16 +8,15 @@ import { muzzles } from './shapes/muzzles'
 import { eyes } from './shapes/eyes'
 import { brows } from './shapes/brows'
 
-const generateBackground = (key: string) => createCircle(pick(backgroundColors, key))
-const generateFace = (key: string) => generateShape(faces, avatarColors, key)
-const generateEar = (key: string) => generateShape(ears, avatarColors, key)
-const generateMuzzle = (key: string) => generateShape(muzzles, avatarColors, key)
-const generateEye = (key: string) => generateShape(eyes, avatarColors, key)
-const generateBrows = (key: string) => generateShape(brows, avatarColors, key)
-const generateShadow = (_key: string) => createShadow()
+const shapeGenerator = (shapes: Shape[], palette: string[]) =>
+  (key: string): string => pick(shapes, key)(pick(palette, key))
 
-const generateShape = (shapes: Shape[], palette: string[], key: string): ReturnType<Shape> =>
-  pick(shapes, key)(pick(palette, key))
+const generateBackground = (key: string) => createCircle(pick(backgroundColors, key))
+const generateFace = shapeGenerator(faces, avatarColors)
+const generateEar = shapeGenerator(ears, avatarColors)
+const generateMuzzle = shapeGenerator(muzzles, avatarColors)
+const generateEye = shapeGenerator(eyes, avatarColors)
+const generateBrows = shapeGenerator(brows, avatarColors)
 
 const generateAvatar = map(
   generateBackground,
@@ -26,7 +25,7 @@ const generateAvatar = map(
   generateMuzzle,
   generateEye,
   generateBrows,
-  generateShadow,
+  createShadow,
 )
 
 export const avatar = (key: string, size = 500): string =>
