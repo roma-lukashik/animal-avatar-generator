@@ -1,7 +1,7 @@
 import { Shape } from './types'
 
 export const eyes: Shape[] = [
-  (_color: string) => `
+  (_color) => `
     <g>
       <g>
         <circle cx="168.96" cy="250" r="20.43"/>
@@ -15,7 +15,7 @@ export const eyes: Shape[] = [
       </g>
     </g>
   `,
-  (_color: string) => `
+  (_color) => `
     <g>
       <g>
         <circle cx="168.96" cy="254.23" r="18.89"/>
@@ -27,7 +27,7 @@ export const eyes: Shape[] = [
       </g>
     </g>
   `,
-  (_color: string) => `
+  (_color) => `
     <g>
       <g>
         <circle cx="168.96" cy="254.49" r="17.23"/>
@@ -39,7 +39,7 @@ export const eyes: Shape[] = [
       </g>
     </g>
   `,
-  (_color: string) => `
+  (_color) => `
     <g>
       <g>
         <circle cx="331.04" cy="253.21" r="22.21"/>
@@ -53,7 +53,7 @@ export const eyes: Shape[] = [
       </g>
     </g>
   `,
-  (_color: string) => `
+  (_color) => `
     <g>
       <g>
         <circle cx="168.62" cy="248.28" r="15.49"/>
