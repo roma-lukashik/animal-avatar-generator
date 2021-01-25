@@ -10,9 +10,7 @@ import { brows } from './shapes/brows'
 
 const size = 500
 
-const generateBackground = (key: string) =>
-  createCircle(size / 2, size / 2, size / 2, pick(backgroundColors, key))
-
+const generateBackground = (key: string) => createCircle(pick(backgroundColors, key))
 const generateEar = (key: string) => generateShape(ears, avatarColors, key)
 const generateFace = (key: string) => generateShape(faces, avatarColors, key)
 const generateMuzzle = (key: string) => generateShape(muzzles, avatarColors, key)
@@ -36,7 +34,7 @@ export const avatar = (key: string): string =>
     size,
     size,
     ...generateAvatar(key),
-    createShadow(size, size),
+    createShadow(),
   )
 
 ;(window as any).avatar = avatar
