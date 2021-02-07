@@ -73,4 +73,16 @@ export const eyes: Shape[] = [
       <ellipse fill="#fff" transform="matrix(0.927 -0.375 0.375 0.927 -77.1287 87.5573)" cx="186.4" cy="241.94" rx="5.11" ry="7.47"/>
     </g>
   `,
+  (_color) => `
+    <g>
+      <g>
+        <circle cx="180.11" cy="258.32" r="17.11"/>
+        <circle fill="#fff" cx="174.66" cy="252.88" r="5.44"/>
+      </g>
+      <g>
+        <circle cx="320.02" cy="258.32" r="17.11"/>
+        <circle fill="#fff" cx="314.58" cy="252.88" r="5.44"/>
+      </g>
+    </g>
+  `,
 ]
