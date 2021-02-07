@@ -10,7 +10,7 @@ export const createSvg = (size: number, ...children: string[]) => `
   </svg>
 `
 
-export const createCircle = (color: string) => `
+export const createBackground = (color: string) => `
   <circle
     cx="250"
     cy="250"

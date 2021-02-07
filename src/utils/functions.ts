@@ -1,6 +1,3 @@
-import { random } from './random'
+import { integer } from './random'
 
-export const map = <T extends any, K extends any>(...functions: Array<(...x: T[]) => K>) =>
-  (...args: T[]): K[] => functions.map((func) => func.apply(null, args))
-
-export const pick = <T extends any>(arr: T[], key: string): T => random(key)(arr)
+export const pick = <T extends any>(arr: T[], index: number): T => arr[integer(index, 0, arr.length - 1)]
