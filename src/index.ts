@@ -9,9 +9,6 @@ import { muzzles } from './shapes/muzzles'
 import { eyes } from './shapes/eyes'
 import { brows } from './shapes/brows'
 
-const shapeGenerator = (shapes: Shape[], color: string) =>
-  (seed: number) => pick(shapes, seed)(color)
-
 const shapes = [
   faces,
   ears,
@@ -20,19 +17,22 @@ const shapes = [
   brows,
 ]
 
-const createAvatar = (color: string) => shapes.map((x) => shapeGenerator(x, color))
-const pickBackgroundColor = (seed: number) => pick(backgroundColors, seed)
+const pickAvatar = (shapes: Shape[], seed: number, color: string) => pick(shapes, seed)(color)
 const pickAvatarColor = (seed: number) => pick(avatarColors, seed)
+const pickBackgroundColor = (seed: number) => pick(backgroundColors, seed)
 
-const svgGenerator = (size: number, random: ReturnType<typeof seedrandom>) =>
-  createSvg(
+export const avatar = (seed: string, size = 500): string => {
+  const random = seedrandom(seed)
+  const backgroundColor = pickBackgroundColor(random())
+  const avatarColor = pickAvatarColor(random())
+  const createAvatar = () => shapes.map((shape) => pickAvatar(shape, random(), avatarColor))
+
+  return createSvg(
     size,
-    createBackground(pickBackgroundColor(random())),
-    ...createAvatar(pickAvatarColor(random())).map((fn) => fn(random())),
+    createBackground(backgroundColor),
+    ...createAvatar(),
     createShadow(),
   )
-
-export const avatar = (seed: string, size = 500): string =>
-  svgGenerator(size, seedrandom(seed))
+}
 
 ;(window as any).avatar = avatar
