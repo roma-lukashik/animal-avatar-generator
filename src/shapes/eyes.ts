@@ -100,4 +100,24 @@ export const eyes: Shape[] = [
       </g>
     </g>
   `,
+  (_color) => `
+    <g>
+      <circle cx="168.96" cy="250" r="23.36"/>
+      <ellipse fill="#fff" transform="matrix(0.7711 -0.6367 0.6367 0.7711 -115.5773 155.2659)" cx="158.16" cy="238.38" rx="9.93" ry="2.39"/>
+      <circle cx="331.04" cy="250" r="23.36"/>
+      <ellipse fill="#fff" transform="matrix(0.7711 -0.6367 0.6367 0.7711 -78.4767 258.4669)" cx="320.24" cy="238.38" rx="9.93" ry="2.39"/>
+    </g>
+  `,
+  (_color) => `
+    <g>
+      <g>
+        <circle cx="168.96" cy="262.77" r="18.38"/>
+        <circle fill="#fff" cx="163.12" cy="256.93" r="5.84"/>
+      </g>
+      <g>
+        <circle cx="331.04" cy="262.77" r="18.38"/>
+        <circle fill="#fff" cx="325.2" cy="256.93" r="5.84"/>
+      </g>
+    </g>
+  `,
 ]
