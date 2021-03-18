@@ -5,7 +5,6 @@ export const backgroundColors = [
 ]
 
 export const avatarColors = [
-  '#ffe9d6',
   '#ffcda3',
   '#ee9595',
   '#fa9579',

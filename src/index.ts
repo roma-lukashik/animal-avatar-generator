@@ -29,7 +29,7 @@ export const avatar = (seed: string, size = 500): string => {
     shapes
       .map((shape) => pickShape(shape, random()))
       .map((shape) => shape(avatarColor))
-      .join()
+      .join('')
 
   return createSvg(
     size,
