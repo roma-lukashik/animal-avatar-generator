@@ -1,14 +1,8 @@
-const MIN = -(2 ** 31)
-const MAX = (2 ** 31) - 1
-
 export const seedrandom = (seed: string) => {
   let value = hash(seed)
   const nextValue = () => value = xorshift32(value)
   return () => nextValue()
 }
-
-export const integer = (value: number, min: number, max: number) =>
-  Math.floor(((value - MIN) / (MAX - MIN)) * (max + 1 - min) + min)
 
 const xorshift32 = (value: number) =>
   shiftLeft(shiftRight(shiftLeft(value, 13), 17), 5)

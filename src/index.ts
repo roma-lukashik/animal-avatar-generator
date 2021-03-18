@@ -1,13 +1,8 @@
-import { pick } from './utils/functions'
+import { pick } from './utils/array'
 import { createBackground, createShadow, createSvg } from './utils/svg'
 import { seedrandom } from './utils/random'
 import { avatarColors, backgroundColors } from './palette'
-import { Shape } from './shapes/types'
-import { ears } from './shapes/ears'
-import { faces } from './shapes/faces'
-import { muzzles } from './shapes/muzzles'
-import { eyes } from './shapes/eyes'
-import { brows } from './shapes/brows'
+import { Shape, faces, ears, muzzles, eyes, brows } from './shapes'
 
 const shapes = [
   faces,
