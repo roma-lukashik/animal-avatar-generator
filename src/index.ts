@@ -4,26 +4,28 @@ import { seedrandom } from './utils/random'
 import { avatarColors, backgroundColors } from './palette'
 import { Shape, faces, ears, muzzles, eyes, brows, patterns } from './shapes'
 
-const shapes = [
-  faces,
-  patterns,
-  ears,
-  muzzles,
-  eyes,
-  brows,
-]
+const optional = (shapes: Shape[], seed: number) =>
+  shapes.map((shape) => seed % 2 ? shape : empty)
 
-const pickShape = (shapes: Shape[], seed: number) => pick(shapes, seed)
-const pickAvatarColor = (seed: number) => pick(avatarColors, seed)
-const pickBackgroundColor = (seed: number) => pick(backgroundColors, seed)
+const empty = (_color: string) => ''
 
 export const avatar = (seed: string, size = 500): string => {
   const random = seedrandom(seed)
-  const backgroundColor = pickBackgroundColor(random())
-  const avatarColor = pickAvatarColor(random())
+  const backgroundColor = pick(backgroundColors, random())
+  const avatarColor = pick(avatarColors, random())
+
+  const shapes = [
+    faces,
+    optional(patterns, random()),
+    ears,
+    muzzles,
+    eyes,
+    brows,
+  ]
+
   const createAvatar = () =>
     shapes
-      .map((shape) => pickShape(shape, random()))
+      .map((shape) => pick(shape, random()))
       .map((shape) => shape(avatarColor))
       .join('')
 
