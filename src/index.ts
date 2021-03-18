@@ -2,10 +2,11 @@ import { pick } from './utils/array'
 import { createBackground, createShadow, createSvg } from './utils/svg'
 import { seedrandom } from './utils/random'
 import { avatarColors, backgroundColors } from './palette'
-import { Shape, faces, ears, muzzles, eyes, brows } from './shapes'
+import { Shape, faces, ears, muzzles, eyes, brows, patterns } from './shapes'
 
 const shapes = [
   faces,
+  patterns,
   ears,
   muzzles,
   eyes,
