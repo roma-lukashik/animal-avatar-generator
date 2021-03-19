@@ -7,3 +7,5 @@ export * from './muzzles'
 export * from './patterns'
 
 export * from './types'
+
+export const emptyShape = (_color: string) => ''
