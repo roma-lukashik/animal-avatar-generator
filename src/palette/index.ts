@@ -1,12 +1,15 @@
 export const backgroundColors = [
-  '#85a392',
-  '#bbf1fa',
-  '#c1a1d3',
+  '#ece2e1',
 ]
 
 export const avatarColors = [
+  '#d291bc',
+  '#ea8a8a',
   '#ee9595',
   '#fa9579',
-  '#ef4f4f',
-  '#74c7b8',
+  '#b1bed5',
+  '#a0c1b8',
+  '#99d8d0',
+  '#7e8a97',
+  '#9dad7f',
 ]
