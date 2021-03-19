@@ -2,7 +2,7 @@ import { pick } from './utils/array'
 import { createBackground, createShadow, createSvg } from './utils/svg'
 import { seedrandom } from './utils/random'
 import { avatarColors, backgroundColors } from './palette'
-import { Shape, faces, ears, muzzles, eyes, brows, patterns } from './shapes'
+import { Shape, faces, ears, muzzles, eyes, brows, patterns, hairs } from './shapes'
 
 const optional = (shapes: Shape[], seed: number) =>
   shapes.map((shape) => seed % 2 ? shape : empty)
@@ -18,6 +18,7 @@ export const avatar = (seed: string, size = 500): string => {
     faces,
     optional(patterns, random()),
     ears,
+    optional(hairs, random()),
     muzzles,
     eyes,
     brows,
