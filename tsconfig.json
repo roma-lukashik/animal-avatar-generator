@@ -1,4 +1,6 @@
 {
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "outDir": "dist",
     "allowSyntheticDefaultImports": true,
@@ -13,10 +15,13 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "downlevelIteration": true,
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
     "declaration": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "target": "ES2017",
     "lib": [
       "es2019",

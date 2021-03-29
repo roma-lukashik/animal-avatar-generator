@@ -4,7 +4,7 @@ import { seedrandom } from './utils/random'
 import { avatarColors, backgroundColors } from './palette'
 import { Shape, faces, ears, muzzles, eyes, brows, patterns, hairs, emptyShape } from './shapes'
 
-export const avatar = (seed: string, size = 500): string => {
+const avatar = (seed: string, size = 500): string => {
   const random = seedrandom(seed)
   const backgroundColor = pick(backgroundColors, random())
   const avatarColor = pick(avatarColors, random())
@@ -35,4 +35,4 @@ export const avatar = (seed: string, size = 500): string => {
   )
 }
 
-;(window as any).avatar = avatar
+export default avatar
