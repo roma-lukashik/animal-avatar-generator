@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": false,
   "description": "The animal avatar generator",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "start": "tsc",
     "build": "tsc",
