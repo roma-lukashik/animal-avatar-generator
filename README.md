@@ -1,6 +1,6 @@
 # Animal Avatar Generator
 
-![Avatar](./public/example.svg)
+![Avatar](https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/20374fa50135a77211f08dc388d7957e20c7f904/public/example.svg)
 
 ## Usage
 
