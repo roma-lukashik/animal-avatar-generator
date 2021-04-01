@@ -12,7 +12,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "experimentalDecorators": true,
     "downlevelIteration": true,
     "module": "esnext",
