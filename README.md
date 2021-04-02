@@ -13,4 +13,4 @@ const svg = avatar('your custom seed')
 document.getElementById('avatar').innerHTML = svg
 ```
 
-<a href="https://github.com/roma-lukashik/roma-lukashik.github.io/dist">Live example</a>
+<a href="https://roma-lukashik.github.io/dist">Live example</a>
