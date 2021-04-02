@@ -1,12 +1,16 @@
-# Animal Avatar Generator
+<div align="center">
+  <img src="https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/05bea9f940e7ff71a333c969ab6fe4932ad46f71/public/example.svg"/>
+</div>
 
-![Avatar](https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/20374fa50135a77211f08dc388d7957e20c7f904/public/example.svg)
+<h1 align="center">Animal Avatar Generator</h1>
 
-## Usage
+<h2>Usage</h2>
 
 ```ts
 import avatar from 'animal-avatar-generator'
 
 const svg = avatar('your custom seed')
-document.querySelector('svg').innerHTML = svg
+document.getElementById('avatar').innerHTML = svg
 ```
+
+<a href="https://github.com/roma-lukashik/roma-lukashik.github.io/dist">Live example</a>
