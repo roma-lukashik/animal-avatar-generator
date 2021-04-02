@@ -4,6 +4,12 @@
   "private": false,
   "description": "The animal avatar generator",
   "main": "dist/index.js",
+  "keywords": [
+    "avatar",
+    "generator",
+    "typescript",
+    "javascript"
+  ],
   "scripts": {
     "start": "tsc",
     "build": "tsc",
