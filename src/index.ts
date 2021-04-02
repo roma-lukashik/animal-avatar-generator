@@ -4,7 +4,15 @@ import { seedrandom } from './utils/random'
 import { avatarColors, backgroundColors } from './palette'
 import { Shape, faces, ears, muzzles, eyes, brows, patterns, hairs, emptyShape } from './shapes'
 
-const avatar = (seed: string, size = 500): string => {
+export type AvatarOptions = {
+  size: number;
+}
+
+const defaultOptions: AvatarOptions = {
+  size: 150,
+}
+
+const avatar = (seed: string, options?: AvatarOptions): string => {
   const random = seedrandom(seed)
   const backgroundColor = pick(backgroundColors, random())
   const avatarColor = pick(avatarColors, random())
@@ -28,7 +36,7 @@ const avatar = (seed: string, size = 500): string => {
       .join('')
 
   return createSvg(
-    size,
+    options?.size ?? defaultOptions.size,
     createBackground(backgroundColor),
     createAvatar(),
     createShadow(),

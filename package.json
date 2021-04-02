@@ -1,6 +1,6 @@
 {
   "name": "animal-avatar-generator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "The animal avatar generator",
   "main": "dist/index.js",

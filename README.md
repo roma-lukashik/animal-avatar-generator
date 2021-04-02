@@ -9,7 +9,7 @@
 ```ts
 import avatar from 'animal-avatar-generator'
 
-const svg = avatar('your custom seed')
+const svg = avatar('your custom seed', { size: 200 })
 document.getElementById('avatar').innerHTML = svg
 ```
 
