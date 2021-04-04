@@ -97,16 +97,4 @@ export const eyes: Shape[] = [
       </g>
     </g>
   `,
-  (_color) => `
-    <g>
-      <g>
-        <circle cx="160.53" cy="239.6" r="15.32"/>
-        <circle fill="#fff" cx="154.07" cy="232.53" r="4.6"/>
-      </g>
-      <g>
-        <circle cx="339" cy="239.6" r="15.32"/>
-        <circle fill="#fff" cx="346.78" cy="242.87" r="4.6"/>
-      </g>
-    </g>
-  `,
 ]
