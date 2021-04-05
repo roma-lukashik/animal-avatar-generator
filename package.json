@@ -13,14 +13,20 @@
   "scripts": {
     "start": "cd example && webpack-dev-server",
     "build": "tsc",
-    "publish": "npm run build && npm publish",
     "test": "jest",
     "test:watch": "jest --watch-all --coverage"
   },
   "files": [
     "dist/**/*"
   ],
-  "author": "Roman Lukashik",
+  "author": {
+    "name": "Roman Lukashik",
+    "email": "roman.lukashik@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roma-lukashik/animal-avatar-generator.git"
+  },
   "license": "MIT",
   "homepage": "https://github.com/roma-lukashik/animal-avatar-generator",
   "devDependencies": {
