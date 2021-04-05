@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/05bea9f940e7ff71a333c969ab6fe4932ad46f71/public/example.svg"/>
+  <img src="https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/b6313d7993313e1c73014f8468b350aa827da1a1/preview.svg"/>
 </div>
 
 <h1 align="center">Animal Avatar Generator</h1>
@@ -13,4 +13,4 @@ const svg = avatar('your custom seed', { size: 200 })
 document.getElementById('avatar').innerHTML = svg
 ```
 
-<a href="https://roma-lukashik.github.io/dist">Live example</a>
+<a href="https://roma-lukashik.github.io/animal-avatar-generator/">Live example</a>
