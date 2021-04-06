@@ -4,6 +4,7 @@
   "private": false,
   "description": "Animal avatar generator",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "avatar",
     "generator",
