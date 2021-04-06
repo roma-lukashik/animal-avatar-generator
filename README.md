@@ -11,7 +11,9 @@
   <a href="https://www.npmjs.com/package/animal-avatar-generator" target="_blank">
     <img src="https://img.shields.io/npm/v/animal-avatar-generator" alt="Latest Version">
   </a>
-  <img alt="npm" src="https://img.shields.io/npm/dw/animal-avatar-generator">
+  <a href="https://www.npmjs.com/package/animal-avatar-generator" target="_blank">
+    <img alt="npm" src="https://img.shields.io/npm/dw/animal-avatar-generator">
+  </a>
 </div>
 
 Generate SVG avatars on client side from a string seed.
