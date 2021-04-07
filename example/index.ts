@@ -1,7 +1,7 @@
 import avatar from '../src'
 
-const createAvatar = (seed?: string) =>
-  document.getElementById('avatar')!.innerHTML = avatar(seed || 'Your custom seed', { size: 500 })
+const createAvatar = (seed = '') =>
+  document.getElementById('avatar')!.innerHTML = avatar(seed, { size: 500 })
 
 createAvatar()
 

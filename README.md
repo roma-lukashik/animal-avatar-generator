@@ -17,7 +17,7 @@
 </div>
 
 Generate SVG avatars on client side from a string seed.
-As long as the same version of the library used it always returns the same avatar for the corresponding seed.
+As long as the same version of the library is used it always returns the same avatar for the corresponding seed.
 
 <a href="https://roma-lukashik.github.io/animal-avatar-generator/">Live example</a>
 
@@ -40,6 +40,14 @@ import avatar from 'animal-avatar-generator'
 const svg = avatar('your custom seed', { size: 200 })
 document.getElementById('avatar').innerHTML = svg
 ```
+
+<h2>Configuration options</h2>
+
+|Name|Type|Description|Default|
+|---|---|---|---|
+|`size`|`number`|Avatar size in pixels|`150`|
+
+Missing a configuration? [Raise an issue](https://github.com/roma-lukashik/animal-avatar-generator/issues/new?title=New%20configuration:).
 
 <h2>License</h2>
 <a href="https://github.com/roma-lukashik/animal-avatar-generator/blob/master/LICENSE">MIT</a>
