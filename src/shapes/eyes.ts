@@ -2,24 +2,24 @@ import { Shape } from './types'
 
 export const eyes: Shape[] = [
   (_color) => `
-    <circle cx="168.96" cy="250" r="20.43"/>
-    <circle fill="#fff" cx="175.39" cy="255.78" r="9.62"/>
-    <circle fill="#fff" cx="159.37" cy="241.04" r="4.23"/>
-    <circle cx="331.04" cy="250" r="20.43"/>
-    <circle fill="#fff" cx="324.61" cy="255.78" r="9.62"/>
-    <circle fill="#fff" cx="340.63" cy="241.04" r="4.23"/>
+    <circle cx="169" cy="250" r="20.4"/>
+    <circle cx="175.4" cy="255.8" r="9.6" fill="#fff"/>
+    <circle cx="159.4" cy="241" r="4.2" fill="#fff"/>
+    <circle cx="331" cy="250" r="20.4"/>
+    <circle cx="324.6" cy="255.8" r="9.6" fill="#fff"/>
+    <circle cx="340.6" cy="241" r="4.2" fill="#fff"/>
   `,
   (_color) => `
-    <circle cx="168.96" cy="254.23" r="18.89"/>
-    <circle fill="#fff" cx="175.94" cy="258.32" r="6.3"/>
-    <circle cx="331.04" cy="254.23" r="18.89"/>
-    <circle fill="#fff" cx="324.06" cy="258.32" r="6.3"/>
+    <circle cx="169" cy="254.2" r="18.9"/>
+    <circle cx="175.9" cy="258.3" r="6.3" fill="#fff"/>
+    <circle cx="331" cy="254.2" r="18.9"/>
+    <circle cx="324.1" cy="258.3" r="6.3" fill="#fff"/>
   `,
   (_color) => `
-    <circle cx="168.96" cy="254.49" r="17.23"/>
-    <circle fill="#fff" cx="175.26" cy="247.77" r="5.87"/>
-    <circle cx="331.04" cy="254.49" r="17.23"/>
-    <circle fill="#fff" cx="324.74" cy="247.77" r="5.87"/>
+    <circle cx="169" cy="254.5" r="17.2"/>
+    <circle cx="175.3" cy="247.8" r="5.9" fill="#fff"/>
+    <circle cx="331" cy="254.5" r="17.2"/>
+    <circle cx="324.7" cy="247.8" r="5.9" fill="#fff"/>
   `,
   (_color) => `
     <circle cx="331.04" cy="253.21" r="22.21"/>
@@ -36,10 +36,10 @@ export const eyes: Shape[] = [
     <circle fill="#fff" cx="336.04" cy="242.97" r="4.95"/>
   `,
   (_color) => `
-    <path d="M339.29,256.81c0,15.33-8,15.14-17.87,15.14c-9.87,0-17.87,0.19-17.87-15.14c0-15.33,8-27.76,17.87-27.76C331.29,229.05,339.29,241.48,339.29,256.81z"/>
-    <ellipse fill="#fff" transform="matrix(0.927 -0.375 0.375 0.927 -66.7051 141.1201)" cx="329.23" cy="241.94" rx="5.11" ry="7.47"/>
-    <path d="M196.46,256.81c0,15.33-8,15.14-17.87,15.14s-17.87,0.19-17.87-15.14c0-15.33,8-27.76,17.87-27.76S196.46,241.48,196.46,256.81z"/>
-    <ellipse fill="#fff" transform="matrix(0.927 -0.375 0.375 0.927 -77.1287 87.5573)" cx="186.4" cy="241.94" rx="5.11" ry="7.47"/>
+    <path d="M339.3 256.8c0 15.3-8 15.1-17.9 15.1-9.8 0-17.8.2-17.8-15 0-15.4 8-27.8 17.8-27.8 9.9 0 17.9 12.4 17.9 27.7z"/>
+    <ellipse cx="329.2" cy="241.9" fill="#fff" rx="5.1" ry="7.5" transform="rotate(-22 329.2 242)"/>
+    <path d="M196.5 256.8c0 15.3-8 15.1-18 15.1s-17.8.2-17.8-15c0-15.4 8-27.8 17.9-27.8s17.9 12.4 17.9 27.7z"/>
+    <ellipse cx="186.4" cy="241.9" fill="#fff" rx="5.1" ry="7.5" transform="rotate(-22 186.4 242)"/>
   `,
   (_color) => `
     <circle cx="180.11" cy="258.32" r="17.11"/>
