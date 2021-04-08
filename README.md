@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/b6313d7993313e1c73014f8468b350aa827da1a1/preview.svg"/>
+  <img src="https://raw.githubusercontent.com/roma-lukashik/animal-avatar-generator/e9b435bb28c8ae2dda224678bdda8faad6035373/preview.svg"/>
 </div>
 
 <h1 align="center">Animal Avatar Generator</h1>
