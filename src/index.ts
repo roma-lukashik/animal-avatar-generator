@@ -1,18 +1,27 @@
 import { pick } from './utils/array'
-import { createBackground, createShadow, createSvg } from './utils/svg'
+import { createBackground, createBlackout, createSvg } from './utils/svg'
 import { seedrandom } from './utils/random'
-import { avatarColors, backgroundColors } from './palette'
+import { avatarColors as aColors, backgroundColors as bColors } from './palette'
 import { Shape, faces, ears, muzzles, eyes, brows, patterns, hairs, emptyShape } from './shapes'
 
 export type AvatarOptions = {
-  size: number;
+  size?: number;
+  avatarColors?: string[];
+  backgroundColors?: string[];
+  blackout?: boolean;
+  round?: boolean;
 }
 
-const defaultOptions: AvatarOptions = {
-  size: 150,
-}
-
-const avatar = (seed: string, options?: AvatarOptions): string => {
+const avatar = (
+  seed: string,
+  {
+    size = 150,
+    avatarColors = aColors,
+    backgroundColors = bColors,
+    blackout = true,
+    round = true,
+  }: AvatarOptions = {},
+): string => {
   const random = seedrandom(seed)
   const backgroundColor = pick(backgroundColors, random())
   const avatarColor = pick(avatarColors, random())
@@ -36,10 +45,10 @@ const avatar = (seed: string, options?: AvatarOptions): string => {
       .join('')
 
   return createSvg(
-    options?.size ?? defaultOptions.size,
-    createBackground(backgroundColor),
+    size,
+    createBackground(round, backgroundColor),
     createAvatar(),
-    createShadow(),
+    blackout ? createBlackout(round) : '',
   )
 }
 

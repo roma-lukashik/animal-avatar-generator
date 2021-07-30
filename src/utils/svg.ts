@@ -10,18 +10,19 @@ export const createSvg = (size: number, ...children: string[]) => `
   </svg>
 `
 
-export const createBackground = (color: string) => `
-  <circle
-    cx="250"
-    cy="250"
-    r="250"
+export const createBackground = (round: boolean, color: string) => `
+  <rect
+    width="500"
+    height="500"
+    rx="${round ? 250 : 0}"
     fill="${color}"
   />
 `
 
-export const createShadow = () => `
+export const createBlackout = (round: boolean) => `
   <path
-    d="M250,0a250,250 0 1,1 0,500"
+    d="${round ? 'M250,0a250,250 0 1,1 0,500' : 'M250,0L500,0L500,500L250,500'}"
+    fill="#15212a"
     fill-opacity="0.08"
   />
 `
