@@ -9,7 +9,7 @@ export const backgroundColors = [
 export const avatarColors = [
   '#d7b89c',
   '#b18272',
-  '#EC8A90',
+  '#ec8a90',
   '#a1Ac88',
   '#99c9bd',
   '#50c8c6',

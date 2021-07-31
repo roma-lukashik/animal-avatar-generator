@@ -46,6 +46,10 @@ document.getElementById('avatar').innerHTML = svg
 |Name|Type|Description|Default|
 |---|---|---|---|
 |`size`|`number`|Avatar size in pixels|`150`|
+|`round`|`boolean`|Use round or rectangle shape|`true`|
+|`blackout`|`boolean`|Use blackout for right side of an avatar|`true`|
+|`avatarColors`|`string[]`|Palette for avatar colors|`['#d7b89c', '#b18272','#ec8a90','#a1Ac88','#99c9bd','#50c8c6']`|
+|`backgroundColors`|`string[]`|Palette for background colors|`['#fcf7d1', '#ece2e1','#e4e3cd','#c4ddd6','#b5f4bc']`|
 
 Missing a configuration? [Raise an issue](https://github.com/roma-lukashik/animal-avatar-generator/issues/new?title=New%20configuration:).
 
