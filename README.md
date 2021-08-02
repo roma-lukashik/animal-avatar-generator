@@ -19,7 +19,7 @@
 Generate SVG avatars on client side from a string seed.
 As long as the same version of the library is used it always returns the same avatar for the corresponding seed.
 
-<a href="https://roma-lukashik.github.io/animal-avatar-generator/">Live example</a>
+<a href="https://roma-lukashik.github.io/animal-avatar-generator/dist/">Live example</a>
 
 <h2>Install</h2>
 
