@@ -1,7 +1,7 @@
 export const darken = (hex: string, amount: number) =>
   rgb2Hex(
     hex2Rgb(hex)
-      .map((x) => clamp(x - amount, 0, 255))
+      .map((x) => clamp(x - amount, 0, 255)),
   )
 
 const hex2Rgb = (hex: string) =>
