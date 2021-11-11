@@ -14,3 +14,8 @@ export const avatarColors = [
   '#99c9bd',
   '#50c8c6',
 ]
+
+export const avatarColorsRGB = [
+  'rgba(255, 99, 71, 0.6)',
+  'rgba(122, 99, 71, 0.6)',
+]
