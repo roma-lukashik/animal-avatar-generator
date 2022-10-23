@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Define using ES Module syntax
+
 ## 1.0.5
 
 ### Bug Fixes
