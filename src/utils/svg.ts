@@ -1,4 +1,4 @@
-export const createSvg = (size: number, ...children: string[]) => `
+export const createSvg = (size: number | string, ...children: string[]) => `
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
