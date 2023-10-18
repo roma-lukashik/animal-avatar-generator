@@ -5,7 +5,7 @@ import { avatarColors as aColors, backgroundColors as bColors } from './palette'
 import { Shape, faces, ears, muzzles, eyes, brows, patterns, hairs, emptyShape } from './shapes'
 
 export type AvatarOptions = {
-  size?: number;
+  size?: number | string;
   avatarColors?: string[];
   backgroundColors?: string[];
   blackout?: boolean;
