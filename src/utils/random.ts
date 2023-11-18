@@ -1,7 +1,14 @@
-export const seedrandom = (seed: string) => {
+export function* seedrandom (seed: string) {
   let value = hash(seed)
   const nextValue = () => value = xorshift32(value)
-  return () => nextValue()
+  while(true){
+    yield nextValue()
+  }
+}
+
+export function generateSeedRandom (seed: string){
+  const seedRandomGen = seedrandom(seed)
+  return ()=>seedRandomGen.next().value ?? 0
 }
 
 const xorshift32 = (value: number) =>

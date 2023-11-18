@@ -18,3 +18,28 @@ const rgb2Hex = (rgb: number[]) =>
 
 const clamp = (value: number, min: number, max: number) =>
   Math.min(max, Math.max(min, value))
+
+export const rgba2hex = (orig: string) => {
+  let a:string
+    const rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
+    alpha = (rgb && rgb[4] || '').trim(),
+      hex = rgb ?
+    (parseInt(rgb[1]) | 1 << 8).toString(16).slice(1) +
+    (parseInt(rgb[2]) | 1 << 8).toString(16).slice(1) +
+    (parseInt(rgb[3]) | 1 << 8).toString(16).slice(1) : orig
+
+  if (alpha !== '') {
+    a = alpha
+  } else {
+    a = '01'
+  }
+  // multiply before convert to HEX
+  a = ((parseInt(a) * 255) | 1 << 8).toString(16).slice(1)
+  const newHex = hex
+  return `#${newHex}`
+}
+
+const testIfRgba = (color: string)=> /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/.test(color)
+
+export const convertIfRgbaColor = (colors: string[]) =>
+  colors.map((color: string)=>testIfRgba(color) ? rgba2hex(color) : color)

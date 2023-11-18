@@ -1,8 +1,9 @@
 import { pick } from './utils/array'
 import { createBackground, createBlackout, createSvg } from './utils/svg'
-import { seedrandom } from './utils/random'
+import { generateSeedRandom } from './utils/random'
 import { avatarColors as aColors, backgroundColors as bColors } from './palette'
 import { Shape, faces, ears, muzzles, eyes, brows, patterns, hairs, emptyShape } from './shapes'
+import { convertIfRgbaColor } from './utils/colors'
 
 export type AvatarOptions = {
   size?: number | string;
@@ -22,7 +23,8 @@ const avatar = (
     round = true,
   }: AvatarOptions = {},
 ): string => {
-  const random = seedrandom(seed)
+  avatarColors = convertIfRgbaColor(avatarColors)
+  const random = generateSeedRandom(seed)
   const backgroundColor = pick(backgroundColors, random())
   const avatarColor = pick(avatarColors, random())
   const optional = (shapes: Shape[]) =>
